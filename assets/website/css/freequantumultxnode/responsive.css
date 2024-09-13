@@ -1,0 +1,129 @@
+@media only screen and (max-width: 7000px){
+	.page-wrapper{
+		overflow: hidden;
+	}
+	
+}
+
+@media only screen and (max-width: 1400px){
+
+	.main-menu .navigation>li:nth-last-child(-n+3)>ul>li>ul {
+	    left: auto;
+	    right: 100%;
+	}
+
+	.main-menu .navigation > li:nth-last-child(-n+2) > ul {
+	    left: auto;
+	    right: 0;
+	}
+	.main-menu .navigation > li:nth-last-child(-n+2) > ul > li > ul {
+	    left: auto;
+	    right: 100%;
+	}
+}
+
+@media only screen and (max-width: 1199px){
+	.banner-section .banner-slider-nav {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1139px){
+	/* Default */
+	.main-header .nav-outer .main-menu,
+	.sticky-header{
+		display: none !important;
+	}
+	.nav-outer .mobile-nav-toggler{
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 991px){
+	.banner-section.dark-style .content-box h1,
+	.banner-section .content-box h1 {
+		font-size: 50px;
+		line-height: 60px;
+	}
+	.banner-section .estimate-form {
+		display: none;
+	}
+	.about-section-two .shape-one {
+	    display: none;
+	}
+}
+
+@media only screen and (min-width: 768px){
+	.main-menu .navigation > li > ul,
+	.main-menu .navigation > li > ul > li > ul{
+		display:block !important;
+		visibility:hidden;
+		opacity:0;
+	}
+}
+
+@media only screen and (max-width: 767px){	
+	br {
+		display: none;
+	}
+	.filter-tabs li .count {
+		display: none;
+	}
+	.features-section .icon-box .icon {
+		margin-bottom: 20px;
+	}
+	.skills-section .inner-container {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.main-header .header-upper .search-btn{
+		display: none;
+	}
+	.main-menu .contact-info {
+	    display: none;
+	}
+
+	.main-header .header-upper .inner-container {
+	    justify-content: center;
+	}
+	.header-top .right-column,
+	.header-top .inner-container {
+	    justify-content: center;
+	}
+	.main-header .header-upper {
+		padding-bottom: 30px;
+	}
+	.header-top .contact-info {
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 575px){
+	.main-header .header-upper .contact-info {
+		display: none;
+	}
+	.header-top .contact-info li:before {
+		display: none;
+	}
+	.main-header .header-upper {
+	    padding-bottom: 0;
+	    padding-top: 0;
+	}
+	.contact-section .contact-form-area {
+		padding: 50px 30px;
+	}
+}
+
+
+@media only screen and (max-width: 350px) {
+
+}
+
+
+
+
+
+
+
+
+

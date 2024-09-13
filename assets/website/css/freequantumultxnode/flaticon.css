@@ -1,0 +1,56 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 28/06/2020 12:21
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("/assets/website/fonts/freequantumultxnode/Flaticon.eot");
+  src: url("/assets/website/fonts/freequantumultxnode/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("/assets/website/fonts/freequantumultxnode/Flaticon.woff2") format("woff2"),
+       url("/assets/website/fonts/freequantumultxnode/Flaticon.woff") format("woff"),
+       url("/assets/website/fonts/freequantumultxnode/Flaticon.ttf") format("truetype"),
+       url("/assets/website/fonts/freequantumultxnode/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("/assets/website/fonts/freequantumultxnode/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+font-family: Flaticon;
+font-style: normal;
+}
+
+.flaticon-right:before { content: "\f100"; }
+.flaticon-search:before { content: "\f101"; }
+.flaticon-right-arrow:before { content: "\f102"; }
+.flaticon-tick:before { content: "\f103"; }
+.flaticon-right-arrow-1:before { content: "\f104"; }
+.flaticon-backward:before { content: "\f105"; }
+.flaticon-clock:before { content: "\f106"; }
+.flaticon-star:before { content: "\f107"; }
+.flaticon-null:before { content: "\f108"; }
+.flaticon-arrow:before { content: "\f109"; }
+.flaticon-share:before { content: "\f10a"; }
+.flaticon-remove:before { content: "\f10b"; }
+.flaticon-signs:before { content: "\f10c"; }
+.flaticon-ui:before { content: "\f10d"; }
+.flaticon-arrows:before { content: "\f10e"; }
+.flaticon-add:before { content: "\f10f"; }
+.flaticon-angle-arrow-pointing-to-right:before { content: "\f110"; }
+.flaticon-null-1:before { content: "\f111"; }
+.flaticon-gps:before { content: "\f112"; }
+.flaticon-search-1:before { content: "\f113"; }
+.flaticon-phone:before { content: "\f114"; }
+.flaticon-long-right-arrow:before { content: "\f115"; }
+.flaticon-long-arrow-pointing-to-the-right:before { content: "\f116"; }
+.flaticon-talk:before { content: "\f117"; }
+.flaticon-comment:before { content: "\f118"; }
+.flaticon-long-arrow-pointing-to-left:before { content: "\f119"; }
