@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freequantumultxnode.github.io/news/article-34187.htm" />
+    <meta charset="utf-8">
+    <title>DataView和DataTable的区别、联系、以及相互转化方法</title>
+        <meta name="description" content="一、定义区别   DataTable：表示内存中数据的一个表，它完全是在内存中的一个独立存在，包含了这张表的全部信息。 建立方式 ①通过连接数据库后从中读取出来跟数据源断开、独立存在的一个表； ②完全" />
+        <link rel="icon" href="/assets/website/img/freequantumultxnode/favicon.ico" type="image/x-icon"/>
+    <!-- Stylesheets -->
+    <link href="/assets/website/css/freequantumultxnode/bootstrap.css" rel="stylesheet">
+    <link href="/assets/website/css/freequantumultxnode/style.css" rel="stylesheet">
+    <!-- Responsive File -->
+    <link href="/assets/website/css/freequantumultxnode/responsive.css" rel="stylesheet">
+    <!-- Color File -->
+    <link href="/assets/website/css/freequantumultxnode/color.css" rel="stylesheet">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4473RL96Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z4473RL96Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="page-wrapper">
+                <!-- Preloader -->
+        <div class="loader-wrap">
+            <div class="preloader">
+                <div class="preloader-close">Preloader Close</div>
+            </div>
+            <div class="layer layer-one"><span class="overlay"></span></div>
+            <div class="layer layer-two"><span class="overlay"></span></div>
+            <div class="layer layer-three"><span class="overlay"></span></div>
+        </div>
+        <!-- Main Header -->
+        <header class="main-header header-style-two">
+            <!-- Header Upper -->
+            <div class="header-upper style-two">
+                <div class="auto-container">
+                    <div class="inner-container">
+                        <!--Logo-->
+                        <div class="logo-box">
+                            <div class="logo">
+                                                                <a href="/">
+                                    <span>Free QuantumultX Node</span>
+                                </a>
+                                                            </div>
+                        </div>
+                        <div class="right-column">
+                            <!--Nav Box-->
+                            <div class="nav-outer">
+                                <!--Mobile Navigation Toggler-->
+                                <div class="mobile-nav-toggler"><img src="/assets/website/img/freequantumultxnode/icons/icon-bar.png" alt=""></div>
+                                <!-- Main Menu -->
+                                <nav class="main-menu navbar-expand-md navbar-light">
+                                    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                        <ul class="navigation">
+                                                                                        <li><a href="/">首页</a></li>
+                                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                                        <li><a href="#">关于</a></li>
+                                            <li><a href="#">联系</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Header Upper-->
+            <!-- Sticky Header  -->
+            <div class="sticky-header main-menu">
+                <div class="auto-container">
+                    <div class="inner-container">
+                        <div class="nav-outer">
+                            <!-- Main Menu -->
+                            <nav class="main-menu">
+                                <!--Keep This Empty / Menu will come through Javascript-->
+                            </nav><!-- Main Menu End-->
+                            <!-- Main Menu End-->
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Sticky Menu -->
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <div class="close-btn"><span class="icon flaticon-remove"></span></div>
+                <nav class="menu-box">
+                    <div class="nav-logo"><a href="/">Free QuantumultX Node</div>
+                    <div class="menu-outer">
+                        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                    </div>
+                    <!--Social Links-->
+                    <div class="social-links">
+                        <ul class="clearfix">
+                            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+                            <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                            <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                            <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div><!-- End Mobile Menu -->
+            <div class="nav-overlay">
+                <div class="cursor"></div>
+                <div class="cursor-follower"></div>
+            </div>
+        </header>
+        <!-- End Main Header -->
+        
+        <!-- Page Title -->
+        <section class="page-title" style="background-image: url(/assets/website/img/freequantumultxnode/background/bg-3.jpg);">
+            <div class="auto-container">
+                <div class="content-box">
+                    <div class="content-wrapper">
+                        <div class="title">
+                            <h1>DataView和DataTable的区别、联系、以及相互转化方法</h1>
+                        </div>
+                        <ul class="bread-crumb">
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Page Title -->
+        <!-- About Section -->
+        <section class="about-section-two py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="QuantumultX Node(圈X)官方节点站" data-url="https://quantumultxnode.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h2> <a id="_0" rel="nofollow"></a>一、定义区别</h2> <ol> <li> <p><strong>DataTable</strong>：表示内存中数据的一个表，它完全是在内存中的一个独立存在，包含了这张表的全部信息。</p> <p><strong>建立方式</strong><br /> ①通过连接数据库后从中读取出来跟数据源断开、独立存在的一个表；<br /> ②完全由程序通过代码来建立的一个表。</p> </li> <li> <p><strong>DataView</strong>：表示用于排序、筛选、搜索、编辑和导航的 DataTable 的<strong>可绑定数据</strong>的自定义视图。</p> </li> <li> <p><strong>DataRowView</strong>：表示</p> </li> </ol> <p>通过DataRowView.Row 属性得到此DataRowView对应的DataRow</p> <p><strong>可以将DataView同数据库的视图类比，不过二者存在以下区别。</strong></p> <table> <thead> <tr> <th>DataView</th> <th>视图</th> </tr> </thead> <tbody> <tr> <td>只能对某一个DataTable建立视图</td> <td>可以跨表建立视图</td> </tr> <tr> <td>通过DataTable.DefaultView属性来建立，通过DataTable.DefaultView的RowFilter 属性和RowStateFilter 属性筛选这个DataTable的一个行子集。</td> <td></td> </tr> </tbody> </table> <h2> <a id="_20" rel="nofollow"></a>二、相互联系</h2> <table> <thead> <tr> <th>DataView</th> <th>DataTable</th> </tr> </thead> <tbody> <tr> <td>建立在DataTable基础上</td> <td></td> </tr> <tr> <td>DataView.Table 属性可以得到此DataView对应的DataTable</td> <td></td> </tr> <tr> <td>DataView dv = dt.DefaultView;</td> <td>DataTable dt = dv.ToTable();</td> </tr> </tbody> </table> <p>DataView的toTable和Table</p> <table> <thead> <tr> <th>toTable</th> <th>Table</th> </tr> </thead> <tbody> <tr> <td>方法</td> <td>属性</td> </tr> <tr> <td>通过RowFilter等过滤后的数据创建新实例</td> <td>返回原始数据</td> </tr> <tr> <td>会对DataView本身的数据产生影响</td> <td>不会对DataView本身的数据产生影响</td> </tr> </tbody> </table> <h2> <a id="_34" rel="nofollow"></a>三、相互转化</h2> <p>1.<strong>dataTable转成dataview</strong><br /> 方法一：</p> <pre><code class="prism language-csharp">        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>dt <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>dt<span class="token punctuation">.</span>Rows<span class="token punctuation">)</span><span class="token punctuation">.</span>Count <span class="token operator">&lt;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>         <span class="token class-name">IEnumerable</span>  dv <span class="token operator">=</span> <span class="token punctuation">(</span>IEnumerable<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">(</span>IListSource<span class="token punctuation">)</span>dt<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">GetList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//将datatable转成dataview</span>         <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name">Object</span> o <span class="token keyword">in</span> dv<span class="token punctuation">)</span>         <span class="token punctuation">{<!-- --></span>             <span class="token class-name">PropertyDescriptorCollection</span> propDesColl <span class="token operator">=</span> TypeDescriptor<span class="token punctuation">.</span><span class="token function">GetProperties</span><span class="token punctuation">(</span>o<span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name">PropertyDescriptor</span> pd <span class="token keyword">in</span> propDesColl<span class="token punctuation">)</span>             <span class="token punctuation">{<!-- --></span>                 <span class="token class-name">Type</span> type <span class="token operator">=</span> pd<span class="token punctuation">.</span>PropertyType<span class="token punctuation">;</span>             <span class="token punctuation">}</span>         <span class="token punctuation">}</span></code></pre> <p>方法二：</p> <pre><code class="prism language-csharp"><span class="token class-name">IEnumerable</span> dv <span class="token operator">=</span> <span class="token punctuation">(</span>IEnumerable<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">(</span>IListSource<span class="token punctuation">)</span>dt<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">GetList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre> <p>2.<strong>将DataView转换为DataTable</strong></p> <p>(1).DataView.ToTable()<br /> 根据现有DataView中的行，创建并返回一个新的DataTable。</p> <p>(2).DataView.ToTable(String)<br /> 参数String为返回的DataTable的名称。</p> <p>注意：输出的表与输入表的列相同，不可自定义。</p> <p>(3).DataView.ToTable(Boolean,String[]) || DataView.ToTable(Boolean,String[],String[],…)<br /> 参数Boolean为true，去重；为false，不去重。</p> <p>数组String[]为显示返回列值的集合。去重是针对String去重的。</p> <p>注意：参数Boolean且默认为false；可自定义返回的列。</p> <pre><code class="prism language-csharp"><span class="token class-name">DataView</span> dv <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DataView</span><span class="token punctuation">(</span>table<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//table是DataTable类型的对象</span> table <span class="token operator">=</span> dv<span class="token punctuation">.</span><span class="token function">ToTable</span><span class="token punctuation">(</span><span class="token keyword">true</span><span class="token punctuation">,</span><span class="token string">"ID"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//去重，且只返回ID列</span></code></pre> <p>(4).DataView.ToTable(String,Boolean,String[])<br /> 根据现有DataView中的行，创建并返回一个新的DataTable。比3多一个参数，可以定义返回表的名称。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-33719.htm">动物疫苗价格表图片及价格（动物疫苗价格查询）</a></p>
+                                        <p>下一个：<a href="/news/article-34190.htm">详细讲解springboot如何实现异步任务_java</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-9-22-quantumult-x-node-share.htm" title="9月22日→22.8M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月22日→22.8M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-28-free-node-subscribe-links.htm" title="10月28日→21.4M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月28日→21.4M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-15-latest-quantumult-x-node.htm" title="9月15日→21.4M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月15日→21.4M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-10-free-subscribe-node.htm" title="12月10日→18.3M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">12月10日→18.3M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-28963.htm" title="宠物零售批发（宠物批发店）">宠物零售批发（宠物批发店）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-26-quantumult-x-node-windows.htm" title="11月26日→20.1M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月26日→20.1M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-22005.htm" title="SpringSecurity核心过滤器-CsrfFilter">SpringSecurity核心过滤器-CsrfFilter</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-6-latest-quantumult-x-node.htm" title="12月6日→19.4M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">12月6日→19.4M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-21101.htm" title="Tensorflow中张量（Tensor）打印信息中shape字段的理解方式">Tensorflow中张量（Tensor）打印信息中shape字段的理解方式</a></li>
+                        <li class="py-2"><a href="/news/article-21562.htm" title="redis之发布与订阅(publish/subscribe模式)">redis之发布与订阅(publish/subscribe模式)</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Main Footer -->
+                <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="footer-bottom">
+                <div class="auto-container">
+                    <div class="copyright">
+                        <div class="text">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <a href="/">Free QuantumultX Node(圈X)免费机场节点订阅官网</a> 版权所有
+                            <br />
+                            Powered by WordPress
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Scroll to top-->
+        <div class="scroll-to-top scroll-to-target" data-target="html"><span class="flaticon-right-arrow"></span></div>
+        <script src="/assets/website/js/frontend/freequantumultxnode/jquery.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/bootstrap-select.min.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/jquery.fancybox.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/isotope.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/owl.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/appear.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/wow.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/lazyload.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/scrollbar.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/TweenMax.min.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/script.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!--End pagewrapper-->
+    
+</body>
+
+</html>
