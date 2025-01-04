@@ -150,6 +150,7 @@
                   				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li><a href="#_label0" rel="nofollow">Spring Boot介绍</a></li> <li><a href="#_label1" rel="nofollow">Spring Boot特点</a></li> <li><a href="#_label2" rel="nofollow">异步任务</a></li> </ul> </div> <p class="maodian"><a name="_label0" rel="nofollow"></a></p> <h2>Spring Boot介绍</h2> <p>Spring Boot 是由 Pivotal 团队提供的全新框架，其设计目的是用来简化新 Spring 应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。用我的话来理解，就是 Spring Boot 其实不是什么新的框架，它默认配置了很多框架的使用方式，就像 Maven 整合了所有的 Jar 包，Spring Boot 整合了所有的框架。</p> <p class="maodian"><a name="_label1" rel="nofollow"></a></p> <h2>Spring Boot特点</h2> <p>1）创建独立的Spring应用程序；</p> <p>2）直接嵌入Tomcat，Jetty或Undertow，无需部署WAR文件；</p> <p>3）提供推荐的基础POM文件（starter）来简化Apache Maven配置；</p> <p>4）尽可能的根据项目依赖来自动配置Spring框架；</p> <p>5）提供可以直接在生产环境中使用的功能，如性能指标，应用信息和应用健康检查；</p> <p>6）开箱即用，没有代码生成，不需要配置过多的xml。同时也可以修改默认值来满足特定的需求。</p> <p>7）其他大量的项目都是基于Spring Boot之上的，如Spring Cloud。</p> <p class="maodian"><a name="_label2" rel="nofollow"></a></p> <h2>异步任务</h2> <p>实例：</p> <p>在service中写一个hello方法，让它延迟三秒</p> <div class="ay1code"> <pre class="brush:java;">@Service  public class AsyncService {      public void hello(){          try {              Thread.sleep(3000);          } catch (InterruptedException e) {              e.printStackTrace();          }          System.out.println("数据正在处理！");      }  }  </pre> </div> <p>让Controller去调用这个业务</p> <div class="ay1code"> <pre class="brush:java;">@RestController  public class AsyncController {      @Autowired      AsyncService asyncService;      @GetMapping("/hello")      public String hello(){          asyncService.hello();          return "ok";      }  }  </pre> </div> <p>启动SpringBoot项目，我们会发现三秒后才会响应ok。</p> <p>所以我们要用异步任务去解决这个问题，很简单就是加一个注解。</p> <p>在hello方法上@Async注解</p> <div class="ay1code"> <pre class="brush:java;">@Service  public class AsyncService {      //异步任务      @Async      public void hello(){          try {              Thread.sleep(3000);          } catch (InterruptedException e) {              e.printStackTrace();          }          System.out.println("数据正在处理！");      }  }  </pre> </div> <p>在SpringBoot启动类上开启异步注解的功能</p> <div class="ay1code"> <pre class="brush:java;">@SpringBootApplication  //开启了异步注解的功能  @EnableAsync  public class Sprintboot09TestApplication {        public static void main(String[] args) {          SpringApplication.run(Sprintboot09TestApplication.class, args);      }    }  </pre> </div> <p>问题解决，服务端瞬间就会响应给前端数据！</p> <p>树越是向往高处的光亮，它的根就越要向下，向泥土向黑暗的深处。</p> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-34187.htm">DataView和DataTable的区别、联系、以及相互转化方法</a></p>
+                                        <p>下一个：<a href="/news/article-34666.htm">C3P0反序列化链学习</a></p>
                                     </div>
                                     </div>
                     <div class="col-md-3">
@@ -159,16 +160,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-24782.htm" title="河南省动物疫苗招标公告最新（河南省动物疫苗管理系统）">河南省动物疫苗招标公告最新（河南省动物疫苗管理系统）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-13-today-quantumult-x-node.htm" title="12月13日→22.9M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">12月13日→22.9M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-26190.htm" title="ASP.NET Core使用EF保存数据、级联删除和事务使用_实用技巧">ASP.NET Core使用EF保存数据、级联删除和事务使用_实用技巧</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-28-node-share-links.htm" title="11月28日→20.1M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月28日→20.1M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-30387.htm" title="猫体外驱虫多久一次合适出门（猫体外驱虫多久一次合适出门了）">猫体外驱虫多久一次合适出门（猫体外驱虫多久一次合适出门了）</a></li>
-                        <li class="py-2"><a href="/news/article-25247.htm" title="通过concat()方法进行字符串连接。">通过concat()方法进行字符串连接。</a></li>
-                        <li class="py-2"><a href="/news/article-33718.htm" title="Docker镜像构建之Dockerfile">Docker镜像构建之Dockerfile</a></li>
-                        <li class="py-2"><a href="/news/article-27105.htm" title="spring security 基本介绍">spring security 基本介绍</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-2-node-share-links.htm" title="10月2日→20.6M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月2日→20.6M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-1-quantumult-x-github.htm" title="10月1日→18.8M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月1日→18.8M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-29436.htm" title="20210公务员国考报名 公务员国考2021年报名">20210公务员国考报名 公务员国考2021年报名</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-9-free-node-subscribe-links.htm" title="11月9日→18.5M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月9日→18.5M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-26189.htm" title="浅尝Spring注解开发_自定义注册组件、属性赋值、自动装配_在线工具">浅尝Spring注解开发_自定义注册组件、属性赋值、自动装配_在线工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-30-quantumult-x-node-github.htm" title="9月30日→22.3M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月30日→22.3M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-12-free-subscribe-node.htm" title="12月12日→18.7M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">12月12日→18.7M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-19724.htm" title="猫咪三针疫苗大概多少钱啊（猫三针疫苗多少钱一只）">猫咪三针疫苗大概多少钱啊（猫三针疫苗多少钱一只）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-28-quantumult-x-node-github.htm" title="12月28日→18.7M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">12月28日→18.7M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-35174.htm" title="长沙免费领养宠物的平台有哪些（长沙哪里可以免费领养宠物）">长沙免费领养宠物的平台有哪些（长沙哪里可以免费领养宠物）</a></li>
+                        <li class="py-2"><a href="/news/article-33233.htm" title="同安宠物领养中心电话多少号码（同安宠物领养中心电话多少号码啊）">同安宠物领养中心电话多少号码（同安宠物领养中心电话多少号码啊）</a></li>
+                        <li class="py-2"><a href="/news/article-32772.htm" title="猫打疫苗去诊所还是医院（猫打疫苗是去宠物店还是宠物医院）">猫打疫苗去诊所还是医院（猫打疫苗是去宠物店还是宠物医院）</a></li>
                     </ul>
     </div>
 </div>
@@ -180,7 +181,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">92</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
