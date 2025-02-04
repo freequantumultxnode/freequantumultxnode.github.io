@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
         <link rel="canonical" href="https://freequantumultxnode.github.io/news/article-21101.htm" />
@@ -7,6 +7,17 @@
     <title>Tensorflow中张量（Tensor）打印信息中shape字段的理解方式</title>
         <meta name="description" content="关于一个张量的shape的理解，可以参考《tensorflow中张量维度—Shape参数理解》这篇博文，该博文讲的已经比较全面。 我在这里补充一下：  一个Tensor的打印信息中shape=()表示" />
         <link rel="icon" href="/assets/website/img/freequantumultxnode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free QuantumultX Node(圈X)免费机场节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freequantumultxnode.github.io/news/article-21101.htm" />
+    <meta property="og:site_name" content="Free QuantumultX Node(圈X)免费机场节点订阅官网" />
+    <meta property="og:title" content="Tensorflow中张量（Tensor）打印信息中shape字段的理解方式" />
+    <meta property="og:image" content="https://freequantumultxnode.github.io/uploads/20240913-1/43c75a8782316f76e140654a4eb1218d.webp" />
+        <meta property="og:release_date" content="2024-12-04T08:42:32" />
+    <meta property="og:updated_time" content="2024-12-04T08:42:32" />
+        <meta property="og:description" content="关于一个张量的shape的理解，可以参考《tensorflow中张量维度—Shape参数理解》这篇博文，该博文讲的已经比较全面。 我在这里补充一下：  一个Tensor的打印信息中shape=()表示" />
+        
     <!-- Stylesheets -->
     <link href="/assets/website/css/freequantumultxnode/bootstrap.css" rel="stylesheet">
     <link href="/assets/website/css/freequantumultxnode/style.css" rel="stylesheet">
@@ -19,6 +30,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Tensorflow中张量（Tensor）打印信息中shape字段的理解方式">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4473RL96Y"></script>
 <script>
@@ -160,16 +188,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-10-23-node-share-links.htm" title="10月23日→19M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月23日→19M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-26189.htm" title="浅尝Spring注解开发_自定义注册组件、属性赋值、自动装配_在线工具">浅尝Spring注解开发_自定义注册组件、属性赋值、自动装配_在线工具</a></li>
-                        <li class="py-2"><a href="/news/article-19725.htm" title="宠物粮食加工厂设备哪的好点呢知乎 宠物粮食加工厂设备哪的好点呢知乎">宠物粮食加工厂设备哪的好点呢知乎 宠物粮食加工厂设备哪的好点呢知乎</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-2-node-share-links.htm" title="10月2日→20.6M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月2日→20.6M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-26-quantumult-x-node-github.htm" title="12月26日→18.4M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">12月26日→18.4M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-23-quantumult-x-node-windows.htm" title="9月23日→21.9M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月23日→21.9M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-13-today-quantumult-x-node.htm" title="12月13日→22.9M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">12月13日→22.9M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-1-node-share.htm" title="12月1日→18.4M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">12月1日→18.4M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-25-today-quantumult-x-node.htm" title="12月25日→22.4M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">12月25日→22.4M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-22-node-share.htm" title="11月22日→19M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月22日→19M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-36590.htm" title="springboot Jar包 秒部署到Linux服务器运行">springboot Jar包 秒部署到Linux服务器运行</a></li>
+                        <li class="py-2"><a href="/news/article-39558.htm" title="动物医院需要什么设备呢图片高清（动物医院的工作流程及要点）">动物医院需要什么设备呢图片高清（动物医院的工作流程及要点）</a></li>
+                        <li class="py-2"><a href="/news/article-22005.htm" title="SpringSecurity核心过滤器-CsrfFilter">SpringSecurity核心过滤器-CsrfFilter</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-17-quantumult-x-node-share.htm" title="11月17日→23M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月17日→23M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-19-quantumult-x-node-share.htm" title="1月19日→21M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月19日→21M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-13-quantumult-x-node-share.htm" title="11月13日→22.6M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月13日→22.6M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-33718.htm" title="Docker镜像构建之Dockerfile">Docker镜像构建之Dockerfile</a></li>
+                        <li class="py-2"><a href="/news/article-25708.htm" title="开一家宠物零食店 开一家宠物零食店 需要具备什么条件">开一家宠物零食店 开一家宠物零食店 需要具备什么条件</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-9-today-quantumult-x-node.htm" title="12月9日→18.8M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">12月9日→18.8M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-33231.htm" title="动物疫苗公司产量排名榜前十名（动物疫苗行业排名）">动物疫苗公司产量排名榜前十名（动物疫苗行业排名）</a></li>
                     </ul>
     </div>
 </div>
@@ -181,19 +209,16 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">92</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
             </li>
                     </ul>
     </div>
