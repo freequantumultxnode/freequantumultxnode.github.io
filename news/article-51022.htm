@@ -178,6 +178,7 @@
                   				  				  				<div id="content_views" class="htmledit_views"> <p>计算机存储的当前时间，本质上只是一个不断递增的整数。Java提供的<code>System.currentTimeMillis()</code>返回的就是以毫秒表示的当前时间戳。</p> <p>这个当前时间戳在<code>java.time</code>中以<code>Instant</code>类型表示，我们用<code>Instant.now()</code>获取当前时间戳，效果和<code>System.currentTimeMillis()</code>类似：</p> <pre><code class="language-java">public class Main {     public static void main(String[] args) {         Instant now = Instant.now();         System.out.println(now.getEpochSecond()); // 秒  1568568760         System.out.println(now.toEpochMilli()); // 毫秒  1568568760316     } }</code></pre> <p>实际上，<code>Instant</code>内部只有两个核心字段：</p> <pre><code class="language-java">public final class Instant implements ... {     private final long seconds;     private final int nanos; }</code></pre> <p>一个是以秒为单位的时间戳，一个是更精确的纳秒精度。它和<code>System.currentTimeMillis()</code>返回的<code>long</code>相比，只是多了更高精度的纳秒。</p> <p>既然<code>Instant</code>就是时间戳，那么，给它附加上一个时区，就可以创建出<code>ZonedDateTime</code>：</p> <pre><code class="language-java">// 以指定时间戳创建Instant: Instant ins = Instant.ofEpochSecond(1568568760); ZonedDateTime zdt = ins.atZone(ZoneId.systemDefault()); System.out.println(zdt); // 2019-09-16T01:32:40+08:00[Asia/Shanghai]</code></pre> <p>可见，对于某一个时间戳，给它关联上指定的<code>ZoneId</code>，就得到了<code>ZonedDateTime</code>，继而可以获得了对应时区的<code>LocalDateTime</code>。</p> <p>所以，<code>LocalDateTime</code>，<code>ZoneId</code>，<code>Instant</code>，<code>ZonedDateTime</code>和<code>long</code>都可以互相转换：</p> <pre><code class="language-java">┌─────────────┐ │LocalDateTime│────┐ └─────────────┘    │    ┌─────────────┐                    ├───&gt;│ZonedDateTime│ ┌─────────────┐    │    └─────────────┘ │   ZoneId    │────┘           ▲ └─────────────┘      ┌─────────┴─────────┐                      │                   │                      ▼                   ▼               ┌─────────────┐     ┌─────────────┐               │   Instant   │&lt;───&gt;│    long     │               └─────────────┘     └─────────────┘</code></pre> <p>转换的时候，只需要留意<code>long</code>类型以毫秒还是秒为单位即可。</p> <h3>小结</h3> <p><code>Instant</code>表示高精度时间戳，它可以和<code>ZonedDateTime</code>以及<code>long</code>互相转换。</p> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-51021.htm">python中sql查询in的使用</a></p>
+                                        <p>下一个：<a href="/news/article-51543.htm">在MySQL中，如何将FROM_UNIXTIME()函数与格式字符串一起使用？</a></p>
                                     </div>
                                     </div>
                     <div class="col-md-3">
@@ -187,16 +188,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-1-11-free-quantumult-x-node.htm" title="1月11日→18.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月11日→18.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-21-free-quantumult-x-node.htm" title="12月21日→22.7M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">12月21日→22.7M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-1-15-node-share-links.htm" title="1月15日→18.7M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月15日→18.7M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-34190.htm" title="详细讲解springboot如何实现异步任务_java">详细讲解springboot如何实现异步任务_java</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-10-today-quantumult-x-node.htm" title="11月10日→21.7M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月10日→21.7M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-29-quantumult-x-node-share.htm" title="11月29日→18.6M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月29日→18.6M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-32773.htm" title="动物疫苗厂家排名榜最新图片大全（动物疫苗厂家排名榜最新图片大全视频）">动物疫苗厂家排名榜最新图片大全（动物疫苗厂家排名榜最新图片大全视频）</a></li>
-                        <li class="py-2"><a href="/news/article-29437.htm" title="宠物粮食品牌前十名排行榜有哪些呢（宠物粮生产厂家排名）">宠物粮食品牌前十名排行榜有哪些呢（宠物粮生产厂家排名）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-17-quantumult-x-node-share.htm" title="11月17日→23M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月17日→23M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-38066.htm" title="宠物领养系统论文参考文献怎么写（宠物领养网站论文）">宠物领养系统论文参考文献怎么写（宠物领养网站论文）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-15-latest-quantumult-x-node.htm" title="12月15日→20.3M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">12月15日→20.3M/S|2024年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-22933.htm" title="ZooKeeper之Java客户端API使用—读取数据。">ZooKeeper之Java客户端API使用—读取数据。</a></li>
+                        <li class="py-2"><a href="/news/article-32772.htm" title="猫打疫苗去诊所还是医院（猫打疫苗是去宠物店还是宠物医院）">猫打疫苗去诊所还是医院（猫打疫苗是去宠物店还是宠物医院）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-17-quantumult-x-node-windows.htm" title="1月17日→20.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月17日→20.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-51022.htm" title="Java8新特性之Instant详解">Java8新特性之Instant详解</a></li>
+                        <li class="py-2"><a href="/news/article-28960.htm" title="mybatis-spring-boot-starter 原理分析">mybatis-spring-boot-starter 原理分析</a></li>
+                        <li class="py-2"><a href="/news/article-40033.htm" title="动物医院有公立的吗还是私立的好（动物医院有公立的吗还是私立的好一点）">动物医院有公立的吗还是私立的好（动物医院有公立的吗还是私立的好一点）</a></li>
+                        <li class="py-2"><a href="/news/article-29914.htm" title="数据库事务四大特性、四大隔离级别以及解决的三种问题">数据库事务四大特性、四大隔离级别以及解决的三种问题</a></li>
+                        <li class="py-2"><a href="/news/article-52062.htm" title="哪里可以养边牧（想养边牧去哪里买）">哪里可以养边牧（想养边牧去哪里买）</a></li>
+                        <li class="py-2"><a href="/news/article-25708.htm" title="开一家宠物零食店 开一家宠物零食店 需要具备什么条件">开一家宠物零食店 开一家宠物零食店 需要具备什么条件</a></li>
                     </ul>
     </div>
 </div>
@@ -208,7 +209,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
