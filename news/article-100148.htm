@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freequantumultxnode.github.io/news/article-100148.htm" />
+    <meta charset="utf-8">
+    <title>定时器中 this 指向修改实现方法和原理讲解</title>
+        <meta name="description" content="定时器中 this 指向修改实现方法和原理讲解      1. 变量替换 2. 箭头函数 3. bind() 方法       定时器属于全局 window ，window.setTimeout();" />
+        <link rel="icon" href="/assets/website/img/freequantumultxnode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free QuantumultX Node(圈X)免费机场节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freequantumultxnode.github.io/news/article-100148.htm" />
+    <meta property="og:site_name" content="Free QuantumultX Node(圈X)免费机场节点订阅官网" />
+    <meta property="og:title" content="定时器中 this 指向修改实现方法和原理讲解" />
+    <meta property="og:image" content="https://freequantumultxnode.github.io/uploads/20240913-1/f39d16e30e257d778c53fec21098d656.webp" />
+        <meta property="og:release_date" content="2025-04-20T09:03:38" />
+    <meta property="og:updated_time" content="2025-04-20T09:03:38" />
+        <meta property="og:description" content="定时器中 this 指向修改实现方法和原理讲解      1. 变量替换 2. 箭头函数 3. bind() 方法       定时器属于全局 window ，window.setTimeout();" />
+        
+    <!-- Stylesheets -->
+    <link href="/assets/website/css/freequantumultxnode/bootstrap.css" rel="stylesheet">
+    <link href="/assets/website/css/freequantumultxnode/style.css" rel="stylesheet">
+    <!-- Responsive File -->
+    <link href="/assets/website/css/freequantumultxnode/responsive.css" rel="stylesheet">
+    <!-- Color File -->
+    <link href="/assets/website/css/freequantumultxnode/color.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="定时器中 this 指向修改实现方法和原理讲解">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4473RL96Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z4473RL96Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="page-wrapper">
+                <!-- Preloader -->
+        <div class="loader-wrap">
+            <div class="preloader">
+                <div class="preloader-close">Preloader Close</div>
+            </div>
+            <div class="layer layer-one"><span class="overlay"></span></div>
+            <div class="layer layer-two"><span class="overlay"></span></div>
+            <div class="layer layer-three"><span class="overlay"></span></div>
+        </div>
+        <!-- Main Header -->
+        <header class="main-header header-style-two">
+            <!-- Header Upper -->
+            <div class="header-upper style-two">
+                <div class="auto-container">
+                    <div class="inner-container">
+                        <!--Logo-->
+                        <div class="logo-box">
+                            <div class="logo">
+                                <a href="/">
+                                                                <span>Free QuantumultX Node</span>
+                                                                </a>
+                            </div>
+                        </div>
+                        <div class="right-column">
+                            <!--Nav Box-->
+                            <div class="nav-outer">
+                                <!--Mobile Navigation Toggler-->
+                                <div class="mobile-nav-toggler"><img src="/assets/website/img/freequantumultxnode/icons/icon-bar.png" alt=""></div>
+                                <!-- Main Menu -->
+                                <nav class="main-menu navbar-expand-md navbar-light">
+                                    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                        <ul class="navigation">
+                                                                                        <li><a href="/">首页</a></li>
+                                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                        <li><a href="/client.htm">客户端</a></li>
+                                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                                    </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Header Upper-->
+            <!-- Sticky Header  -->
+            <div class="sticky-header main-menu">
+                <div class="auto-container">
+                    <div class="inner-container">
+                        <div class="nav-outer">
+                            <!-- Main Menu -->
+                            <nav class="main-menu">
+                                <!--Keep This Empty / Menu will come through Javascript-->
+                            </nav><!-- Main Menu End-->
+                            <!-- Main Menu End-->
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Sticky Menu -->
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <div class="close-btn"><span class="icon flaticon-remove"></span></div>
+                <nav class="menu-box">
+                    <div class="nav-logo"><a href="/">Free QuantumultX Node</div>
+                    <div class="menu-outer">
+                        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                    </div>
+                    <!--Social Links-->
+                    <div class="social-links">
+                        <ul class="clearfix">
+                            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+                            <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                            <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                            <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div><!-- End Mobile Menu -->
+            <div class="nav-overlay">
+                <div class="cursor"></div>
+                <div class="cursor-follower"></div>
+            </div>
+        </header>
+        <!-- End Main Header -->
+        
+        <!-- Page Title -->
+        <section class="page-title" style="background-image: url(/assets/website/img/freequantumultxnode/background/bg-3.jpg);">
+            <div class="auto-container">
+                <div class="content-box">
+                    <div class="content-wrapper">
+                        <div class="title">
+                            <h1>定时器中 this 指向修改实现方法和原理讲解</h1>
+                        </div>
+                        <ul class="bread-crumb">
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Page Title -->
+        <!-- About Section -->
+        <section class="about-section-two py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="QuantumultX Node(圈X)官方节点站" data-url="https://quantumultxnode.github.io">
+                <div class="xcblog-blog-detail">
+                      				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <div class="toc"> <h3>定时器中 this 指向修改实现方法和原理讲解</h3> <ul> <li> <ul> <li> <ul> <li><a href="#1__23" rel="nofollow">1. 变量替换</a></li> <li><a href="#2__47" rel="nofollow">2. 箭头函数</a></li> <li><a href="#3_bind__69" rel="nofollow">3. bind() 方法</a></li> </ul> </li> </ul> </li> </ul> </div> <p>定时器属于全局 window ，<code>window.setTimeout(); window.setInterval();</code> 普通函数的调用，this 指向它的调用者，所以这也就是为什么 定时器当中的 this 指向 window 的原因。</p> <p>点击一个 div 延迟改变盒子的背景色</p> <pre><code class="prism language-javascript"><span class="token comment">//以下是错误是否，运行报错</span>  	<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"box"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>         <span class="token keyword">let</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          box<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>             <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>                 <span class="token keyword">this</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">'teal'</span><span class="token punctuation">;</span>                  <span class="token comment">// 代码报错 由于定时器是全局的，window.setTimeout() 所以 this 指向 window 而非 box ，运行找不到 this 从而报错，可以将匿名函数改写为箭头函数，从而解决 this 指向问题</span>             <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token punctuation">}</span><span class="token punctuation">)</span>     <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span> </code></pre> <p>运行以上代码，程序报错 <code>Uncaught TypeError: this.style is undefined</code> 原因在于 定时器中的 this 指向 window ，而 this 应该指向事件绑定对象 box。<br /> 以下三种方法都可以修改定时器中的 this 指向：</p> <h3> <a id="1__23" rel="nofollow"></a>1. 变量替换</h3> <p>原理： 定义一个新的变量，并赋值为 this，从而替代 this，这个变量一般命名为 _that / that /</p> <p>实现：将定时器外面的 this （指向 box）赋值给新变量，用新变量替代 this 的作用。</p> <pre><code class="prism language-javascript">	<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"box"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>         <span class="token keyword">let</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          box<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>             <span class="token keyword">let</span> _that <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span> <span class="token comment">// 将定时器外面的 this(指向 box ) 赋给新变量 _that 用新变量替代 this 进行使用</span>             <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>                 _that<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">'teal'</span><span class="token punctuation">;</span>             <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token punctuation">}</span><span class="token punctuation">)</span>             <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span> </code></pre> <h3> <a id="2__47" rel="nofollow"></a>2. 箭头函数</h3> <p>原理：箭头函数中的 this 是静态的，this 始终指向函数声明时所在作用域下的 this 值。</p> <p>实现：用箭头函数替代定时器中的匿名函数，而箭头函数声明时所在的块级作用域中的 this 指向 box，所以箭头函数中的 this 也指向 box，达到目的。</p> <pre><code class="prism language-javascript">	<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"box"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>         <span class="token keyword">let</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          box<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>             <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{<!-- --></span>                 <span class="token keyword">this</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">'teal'</span><span class="token punctuation">;</span>             <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token punctuation">}</span><span class="token punctuation">)</span>     <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span> </code></pre> <h3> <a id="3_bind__69" rel="nofollow"></a>3. bind() 方法</h3> <p>原理：bind() 可以修改函数中 this 指向（注：这里不用 call()、apply() 是由于这两个方法在修改函数中的 this 指向的同时，还会进行函数调用，这里只需修改 this 指向，不需要调用函数 ）。</p> <p>实现：在定时器中的匿名函数后面添加 bind() ,将匿名函数中的 this 指向由 window 改为 box 。</p> <pre><code class="prism language-javascript"><span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"box"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>         <span class="token keyword">let</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          box<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>             <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>                 <span class="token keyword">this</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">'teal'</span><span class="token punctuation">;</span>             <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token punctuation">}</span><span class="token punctuation">)</span>     <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span> </code></pre> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-99370.htm">动物疫苗的作用原理是什么呢（动物疫苗的使用方法及注意事项）</a></p>
+                                        <p>下一个：<a href="/news/article-100149.htm">北京看动物咬伤的医院哪家好（北京狗咬伤去哪个医院比较好）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-65830.htm" title="猫瘟疫苗多大可以打（猫瘟疫苗管多久）">猫瘟疫苗多大可以打（猫瘟疫苗管多久）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-3-node-share.htm" title="3月3日→18.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">3月3日→18.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-66455.htm" title="宠物店打疫苗违法吗（宠物店打疫苗违法吗）">宠物店打疫苗违法吗（宠物店打疫苗违法吗）</a></li>
+                        <li class="py-2"><a href="/news/article-84621.htm" title="动物接种疫苗前的准备事项有哪些（动物接种疫苗前的准备事项有哪些要求）">动物接种疫苗前的准备事项有哪些（动物接种疫苗前的准备事项有哪些要求）</a></li>
+                        <li class="py-2"><a href="/news/article-87507.htm" title="动物医院实践心得500字作文怎么写 动物医院实践心得500字作文怎么写的">动物医院实践心得500字作文怎么写 动物医院实践心得500字作文怎么写的</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-17-quantumult-x-node-github.htm" title="3月17日→22.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">3月17日→22.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-83926.htm" title="重庆宠物领养平台有哪些地方可以注册的的简单介绍">重庆宠物领养平台有哪些地方可以注册的的简单介绍</a></li>
+                        <li class="py-2"><a href="/news/article-66457.htm" title="被猫抓了如何判断得没得狂犬的简单介绍">被猫抓了如何判断得没得狂犬的简单介绍</a></li>
+                        <li class="py-2"><a href="/news/article-73610.htm" title="家猫轻微抓伤（家猫轻微抓伤没有出血用不用打疫苗）">家猫轻微抓伤（家猫轻微抓伤没有出血用不用打疫苗）</a></li>
+                        <li class="py-2"><a href="/news/article-92676.htm" title="宠物粮生产基地大多在郊区吗 宠物粮生产基地大多在郊区吗为什么">宠物粮生产基地大多在郊区吗 宠物粮生产基地大多在郊区吗为什么</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">63</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Main Footer -->
+                <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="footer-bottom">
+                <div class="auto-container">
+                    <div class="copyright">
+                        <div class="text">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <a href="/">Free QuantumultX Node(圈X)免费机场节点订阅官网</a> 版权所有
+                            <br />
+                            Powered by WordPress
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Scroll to top-->
+        <div class="scroll-to-top scroll-to-target" data-target="html"><span class="flaticon-right-arrow"></span></div>
+        <script src="/assets/website/js/frontend/freequantumultxnode/jquery.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/bootstrap-select.min.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/jquery.fancybox.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/isotope.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/owl.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/appear.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/wow.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/lazyload.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/scrollbar.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/TweenMax.min.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/freequantumultxnode/script.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!--End pagewrapper-->
+    
+</body>
+
+</html>
