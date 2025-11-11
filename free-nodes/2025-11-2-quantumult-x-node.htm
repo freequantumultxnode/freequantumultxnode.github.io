@@ -401,6 +401,11 @@ IP-CIDR,172.16.0.0/12,DIRECT
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 节点订阅如何实现自动更新？</h5></div>
+    <div class="panel-body">
+        用户可添加订阅 URL，Nekoray 会定期自动下载并更新节点列表。保持节点最新可减少手动维护，提高节点可用性和网络连接稳定性，确保科学上网体验顺畅。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Shadowrocket 节点延迟排序如何提升访问体验？</h5></div>
     <div class="panel-body">
         Shadowrocket 会测速节点延迟和丢包率，并优先使用低延迟节点。结合策略组和分流规则，可保证网页、视频和游戏流量通过最优节点，提高访问速度和稳定性。<hr />    </div>
@@ -411,29 +416,9 @@ IP-CIDR,172.16.0.0/12,DIRECT
         可以。Nekobox 与 Shadowsocks、Clash 等客户端互不干扰，可以同时运行。用户可通过策略组或分流规则选择使用节点，实现灵活的网络管理。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的 Profile URL 是否可以同时添加多个？</h5></div>
+    <div class="panel-heading"><h5>WinXray 的多策略组如何优化流量分配？</h5></div>
     <div class="panel-body">
-        可以。Clash 支持导入多个 Profile URL，用户可在“配置”面板切换不同订阅源。多个配置之间互不干扰，方便区分不同地区或用途的线路。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 支持哪些传输层协议？</h5></div>
-    <div class="panel-body">
-        V2Ray 支持多种传输层，包括 TCP、mKCP、WebSocket、gRPC、QUIC 等。每种传输方式都有不同的性能特点，例如 TCP 稳定、WS 兼容 CDN、QUIC 延迟低。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 节点订阅如何实现自动更新？</h5></div>
-    <div class="panel-body">
-        用户可添加订阅 URL，Nekoray 会定期自动下载并更新节点列表。保持节点最新可减少手动维护，提高节点可用性和网络连接稳定性，确保科学上网体验顺畅。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 的分组策略可以自动切换节点吗？</h5></div>
-    <div class="panel-body">
-        可以。用户可以设置策略组，PassWall2 会定期测速并根据延迟或成功率自动选择最优节点，实现智能节点切换，保证网络稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 的 TUN 模式与 SOCKS 模式有何差异？</h5></div>
-    <div class="panel-body">
-        TUN 模式通过虚拟网卡拦截所有流量，更接近系统级代理；SOCKS 模式则仅作用于指定应用。TUN 模式更适合全局代理需求，而 SOCKS 模式轻量快捷，适用于游戏或单软件加速。<hr />    </div>
+        多策略组允许将节点按用途、延迟或地理位置分类，并结合规则文件自动分流流量。这样不同应用如游戏、视频和网页流量都能走最优节点，提高整体访问速度和稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 如何按端口分流不同流量？</h5></div>
@@ -441,14 +426,29 @@ IP-CIDR,172.16.0.0/12,DIRECT
         Sing-box 支持按端口匹配流量，将不同应用分配到指定节点。结合策略组使用，可实现精准分流，提高访问速度和网络稳定性，优化整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的 Profile URL 是否可以同时添加多个？</h5></div>
+    <div class="panel-body">
+        可以。Clash 支持导入多个 Profile URL，用户可在“配置”面板切换不同订阅源。多个配置之间互不干扰，方便区分不同地区或用途的线路。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Quantumult X 中自定义脚本导致规则异常，该如何恢复？</h5></div>
     <div class="panel-body">
         先停用或删除最近添加的自定义脚本，重启应用并观察网络行为是否恢复。若无法恢复，备份并重置配置为默认，然后逐个添加脚本以定位导致异常的具体脚本并修复。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的多策略组如何优化流量分配？</h5></div>
+    <div class="panel-heading"><h5>V2Ray 支持哪些传输层协议？</h5></div>
     <div class="panel-body">
-        多策略组允许将节点按用途、延迟或地理位置分类，并结合规则文件自动分流流量。这样不同应用如游戏、视频和网页流量都能走最优节点，提高整体访问速度和稳定性。    </div>
+        V2Ray 支持多种传输层，包括 TCP、mKCP、WebSocket、gRPC、QUIC 等。每种传输方式都有不同的性能特点，例如 TCP 稳定、WS 兼容 CDN、QUIC 延迟低。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Netch 的 TUN 模式与 SOCKS 模式有何差异？</h5></div>
+    <div class="panel-body">
+        TUN 模式通过虚拟网卡拦截所有流量，更接近系统级代理；SOCKS 模式则仅作用于指定应用。TUN 模式更适合全局代理需求，而 SOCKS 模式轻量快捷，适用于游戏或单软件加速。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 的分组策略可以自动切换节点吗？</h5></div>
+    <div class="panel-body">
+        可以。用户可以设置策略组，PassWall2 会定期测速并根据延迟或成功率自动选择最优节点，实现智能节点切换，保证网络稳定性。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -477,16 +477,16 @@ IP-CIDR,172.16.0.0/12,DIRECT
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-11-10-latest-quantumult-x-node.htm" title="11月10日→21M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月10日→21M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-7-node-share-links.htm" title="10月7日→23M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月7日→23M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-4-node-share-links.htm" title="11月4日→21.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月4日→21.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-5-quantumult-x-node-windows.htm" title="11月5日→19.7M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月5日→19.7M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-8-free-node-subscribe.htm" title="11月8日→21.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月8日→21.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-13-node-share-links.htm" title="10月13日→22.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月13日→22.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-6-latest-quantumult-x-node.htm" title="10月6日→18.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月6日→18.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-18-quantumult-x-node.htm" title="10月18日→21.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月18日→21.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-6-free-node-subscribe-links.htm" title="11月6日→22.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月6日→22.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-10-14-latest-quantumult-x-node.htm" title="10月14日→22.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月14日→22.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-21-quantumult-x-node-windows.htm" title="10月21日→19.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月21日→19.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-26-free-quantumult-x-node.htm" title="10月26日→19M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月26日→19M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-1-free-node-subscribe.htm" title="11月1日→23M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月1日→23M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-11-quantumult-x-node-windows.htm" title="10月11日→22.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月11日→22.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-27-quantumult-x-node-windows.htm" title="10月27日→18.6M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月27日→18.6M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-24-quantumult-x-node-windows.htm" title="10月24日→22.7M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月24日→22.7M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-22-latest-quantumult-x-node.htm" title="10月22日→18.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月22日→18.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-10-free-node-subscribe-links.htm" title="10月10日→19.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月10日→19.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-2-quantumult-x-node.htm" title="11月2日→22.7M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月2日→22.7M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
                     </ul>
     </div>
 </div>
@@ -498,7 +498,7 @@ IP-CIDR,172.16.0.0/12,DIRECT
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">5</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
