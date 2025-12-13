@@ -398,29 +398,9 @@ A4：启用加密、使用私密DNS、避免使用免费无保障服务是关键
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的域名规则如何实现分流？</h5></div>
-    <div class="panel-body">
-        Sing-box 支持按域名匹配流量，将不同网站或应用流量分配到指定节点。结合策略组自动切换低延迟节点，可优化访问速度，保证网络稳定性并提高整体体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何配置 Sing-box 使用 DoH 加密 DNS？</h5></div>
-    <div class="panel-body">
-        在 dns 模块中添加类型为 doh 的上游，如 `https://1.1.1.1/dns-query`，并指定 bootstrap 地址。启用加密 DNS 可防止 DNS 泄露并加快国际解析速度，提高整体隐私保护。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 如何设置分流规则？</h5></div>
-    <div class="panel-body">
-        Nekobox 提供图形化规则编辑界面，可基于 IP、域名、地区等条件创建分流规则。例如可设置国内直连、国外代理、特定网站走特定节点，操作直观。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Matsuri 可以用于 Android 吗？</h5></div>
     <div class="panel-body">
         Matsuri 主要针对桌面平台开发，目前并未推出 Android 版本。但可使用其配置文件在兼容的客户端（如 Nekobox 或 Clash Android）中加载以获得类似体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Quantumult X 的“分流规则”如何管理？</h5></div>
-    <div class="panel-body">
-        Quantumult X 使用策略组管理分流规则。用户可将规则文件导入应用，通过“policy group”定义不同流量走向，实现国内直连、国外代理、广告拦截等功能的自动分配。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 如何通过策略组优化多应用分流？</h5></div>
@@ -433,9 +413,24 @@ A4：启用加密、使用私密DNS、避免使用免费无保障服务是关键
         Clash 的配置文件通常位于程序目录或配置文件夹中（如 Windows 下的 .config/clash）。用户可直接复制该 YAML 文件以备份，也可将订阅链接保存，便于后续恢复或在其他设备上同步使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekobox 如何设置分流规则？</h5></div>
+    <div class="panel-body">
+        Nekobox 提供图形化规则编辑界面，可基于 IP、域名、地区等条件创建分流规则。例如可设置国内直连、国外代理、特定网站走特定节点，操作直观。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 支持规则分流功能吗？</h5></div>
+    <div class="panel-body">
+        支持。Surfboard 可通过规则文件和策略组将不同类型流量分配到指定节点。保证网页浏览、视频和游戏走最优线路，提高访问速度和整体网络稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>如何给 Clash 或 Sing-box 添加本地广告屏蔽规则？</h5></div>
     <div class="panel-body">
         可导入公共广告域名列表（如 ads、trackers）并将其指向 `REJECT` 或 `DIRECT`（根据需求）；还可以使用 rule-provider 自动更新广告规则，并结合 hosts 或 DNS 层面进行联合拦截以提升屏蔽效果。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何配置 Sing-box 使用 DoH 加密 DNS？</h5></div>
+    <div class="panel-body">
+        在 dns 模块中添加类型为 doh 的上游，如 `https://1.1.1.1/dns-query`，并指定 bootstrap 地址。启用加密 DNS 可防止 DNS 泄露并加快国际解析速度，提高整体隐私保护。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Mellow TUN 模式适合哪些应用？</h5></div>
@@ -443,9 +438,14 @@ A4：启用加密、使用私密DNS、避免使用免费无保障服务是关键
         TUN 模式拦截系统 IP 层流量，实现全局代理。适合游戏、视频、浏览器等全局应用，保证所有流量走节点，提高网络稳定性和速度，比普通 SOCKS5 代理覆盖范围更广。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 支持规则分流功能吗？</h5></div>
+    <div class="panel-heading"><h5>Quantumult X 的“分流规则”如何管理？</h5></div>
     <div class="panel-body">
-        支持。Surfboard 可通过规则文件和策略组将不同类型流量分配到指定节点。保证网页浏览、视频和游戏走最优线路，提高访问速度和整体网络稳定性。    </div>
+        Quantumult X 使用策略组管理分流规则。用户可将规则文件导入应用，通过“policy group”定义不同流量走向，实现国内直连、国外代理、广告拦截等功能的自动分配。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 的域名规则如何实现分流？</h5></div>
+    <div class="panel-body">
+        Sing-box 支持按域名匹配流量，将不同网站或应用流量分配到指定节点。结合策略组自动切换低延迟节点，可优化访问速度，保证网络稳定性并提高整体体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -474,16 +474,16 @@ A4：启用加密、使用私密DNS、避免使用免费无保障服务是关键
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-11-8-free-node-subscribe.htm" title="11月8日→21.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月8日→21.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-6-free-node-subscribe-links.htm" title="11月6日→22.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月6日→22.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-11-node-share-links.htm" title="12月11日→19.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">12月11日→19.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-1-today-quantumult-x-node.htm" title="12月1日→19M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">12月1日→19M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-5-free-node-subscribe.htm" title="12月5日→18.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">12月5日→18.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-23-free-node-subscribe.htm" title="11月23日→22M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月23日→22M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-26-free-subscribe-node.htm" title="11月26日→18.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月26日→18.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-7-free-quantumult-x-node.htm" title="11月7日→18.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月7日→18.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-13-quantumult-x-github.htm" title="11月13日→21.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月13日→21.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-30-quantumult-x-node-windows.htm" title="11月30日→20.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月30日→20.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-17-quantumult-x-node-share.htm" title="11月17日→18.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月17日→18.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-23-free-node-subscribe.htm" title="11月23日→22M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月23日→22M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-27-free-node-subscribe-links.htm" title="11月27日→21.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月27日→21.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-14-today-quantumult-x-node.htm" title="11月14日→21M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月14日→21M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-7-free-quantumult-x-node.htm" title="11月7日→18.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月7日→18.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-19-latest-quantumult-x-node.htm" title="11月19日→18.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月19日→18.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-11-quantumult-x-node-windows.htm" title="11月11日→20.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月11日→20.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
                     </ul>
     </div>
 </div>
@@ -495,7 +495,7 @@ A4：启用加密、使用私密DNS、避免使用免费无保障服务是关键
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">5</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
+                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
