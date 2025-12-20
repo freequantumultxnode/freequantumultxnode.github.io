@@ -1,4 +1,4 @@
-# 12月13日→19.7M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址  更新时间 2025-12-13 09:38:53
+# 12月20日→18.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址  更新时间 2025-12-20 09:21:00
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://freequantumultxnode.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://freequantumultxnode.github.io/uploads/2025/12/0-20251213.yaml
-- https://freequantumultxnode.github.io/uploads/2025/12/1-20251213.yaml
-- https://freequantumultxnode.github.io/uploads/2025/12/2-20251213.yaml
-- https://freequantumultxnode.github.io/uploads/2025/12/3-20251213.yaml
-- https://freequantumultxnode.github.io/uploads/2025/12/4-20251213.yaml
+- https://freequantumultxnode.github.io/uploads/2025/12/0-20251220.yaml
+- https://freequantumultxnode.github.io/uploads/2025/12/1-20251220.yaml
+- https://freequantumultxnode.github.io/uploads/2025/12/2-20251220.yaml
+- https://freequantumultxnode.github.io/uploads/2025/12/3-20251220.yaml
+- https://freequantumultxnode.github.io/uploads/2025/12/4-20251220.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://freequantumultxnode.github.io/uploads/2025/12/0-20251213.txt
-- https://freequantumultxnode.github.io/uploads/2025/12/1-20251213.txt
-- https://freequantumultxnode.github.io/uploads/2025/12/2-20251213.txt
-- https://freequantumultxnode.github.io/uploads/2025/12/3-20251213.txt
-- https://freequantumultxnode.github.io/uploads/2025/12/4-20251213.txt
+- https://freequantumultxnode.github.io/uploads/2025/12/0-20251220.txt
+- https://freequantumultxnode.github.io/uploads/2025/12/1-20251220.txt
+- https://freequantumultxnode.github.io/uploads/2025/12/2-20251220.txt
+- https://freequantumultxnode.github.io/uploads/2025/12/3-20251220.txt
+- https://freequantumultxnode.github.io/uploads/2025/12/4-20251220.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://freequantumultxnode.github.io/uploads/2025/12/20251213.json
+- https://freequantumultxnode.github.io/uploads/2025/12/20251220.json
 
 ## 更多Clash节点订阅 ：
 
