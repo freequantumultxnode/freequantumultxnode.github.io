@@ -362,24 +362,34 @@ DNS修改只能解决域名解析问题，若网站被IP封锁或深度检测拦
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 节点测速结合策略组的作用？</h5></div>
-    <div class="panel-body">
-        Shadowrocket 定期测速节点延迟和丢包率，并结合策略组自动选择最佳节点。保证网页、视频和游戏流量走低延迟节点，提高访问速度和连接稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 能否直接读取 Clash 配置？</h5></div>
     <div class="panel-body">
         Sing-box 原生支持 Clash YAML 格式的导入，会自动解析成自身 JSON 结构。虽然部分脚本功能不兼容，但节点和规则可以正常使用，迁移过程非常平滑。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 支持哪些协议？</h5></div>
-    <div class="panel-body">
-        Clash 支持多种主流代理协议，包括 VMess、VLess、Trojan、Shadowsocks、Snell、Socks5 等。通过配置文件或订阅源，用户可以灵活组合不同协议的节点，实现复杂的分流策略与优先级控制。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS + XTLS 在高延迟移动网络的优势？</h5></div>
     <div class="panel-body">
         XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定移动网络。结合策略组和节点切换，可提高网页浏览、视频播放和游戏连接的稳定性和流畅度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 节点测速结合策略组的作用？</h5></div>
+    <div class="panel-body">
+        Shadowrocket 定期测速节点延迟和丢包率，并结合策略组自动选择最佳节点。保证网页、视频和游戏流量走低延迟节点，提高访问速度和连接稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 支持 Trojan 协议吗？</h5></div>
+    <div class="panel-body">
+        WinXray 内核基于 Xray-core，因此原生支持 Trojan 协议。用户在导入配置时，只需选择 Trojan 类型节点即可，无需额外插件，非常适合需要 TLS 伪装的环境。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 如何设置流量配额限制？</h5></div>
+    <div class="panel-body">
+        管理员可在 Hiddify Next 面板为每个用户设置流量上限或带宽限制。超过配额后可自动阻止或降速，保证服务器资源合理分配，防止单用户占用过多带宽。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 如何实现分流规则？</h5></div>
+    <div class="panel-body">
+        V2Ray 使用 routing 模块实现分流，可根据目标域名、IP、端口或协议类型决定流量走向。用户可自定义多个 outbound，并通过规则实现国内直连、国外代理等智能路由功能。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 如何实现流量精细分流？</h5></div>
@@ -392,24 +402,14 @@ DNS修改只能解决域名解析问题，若网站被IP封锁或深度检测拦
         在 WinXray 界面中点击“导入订阅”选项，将机场提供的订阅链接粘贴进去。点击更新后，WinXray 会自动下载节点配置并生成列表，用户可手动选择或自动切换延迟最低的节点使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 如何设置流量配额限制？</h5></div>
-    <div class="panel-body">
-        管理员可在 Hiddify Next 面板为每个用户设置流量上限或带宽限制。超过配额后可自动阻止或降速，保证服务器资源合理分配，防止单用户占用过多带宽。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 支持 Trojan 协议吗？</h5></div>
-    <div class="panel-body">
-        WinXray 内核基于 Xray-core，因此原生支持 Trojan 协议。用户在导入配置时，只需选择 Trojan 类型节点即可，无需额外插件，非常适合需要 TLS 伪装的环境。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 如何实现分流规则？</h5></div>
-    <div class="panel-body">
-        V2Ray 使用 routing 模块实现分流，可根据目标域名、IP、端口或协议类型决定流量走向。用户可自定义多个 outbound，并通过规则实现国内直连、国外代理等智能路由功能。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 的自定义 outbound 功能有什么用？</h5></div>
     <div class="panel-body">
-        Sing-box 允许用户自定义多个 outbound 出口，并通过路由规则选择性输出。例如可让流媒体走特定节点，而其他网站使用备用节点，从而实现精准分流。    </div>
+        Sing-box 允许用户自定义多个 outbound 出口，并通过路由规则选择性输出。例如可让流媒体走特定节点，而其他网站使用备用节点，从而实现精准分流。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 支持哪些协议？</h5></div>
+    <div class="panel-body">
+        Clash 支持多种主流代理协议，包括 VMess、VLess、Trojan、Shadowsocks、Snell、Socks5 等。通过配置文件或订阅源，用户可以灵活组合不同协议的节点，实现复杂的分流策略与优先级控制。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -438,16 +438,16 @@ DNS修改只能解决域名解析问题，若网站被IP封锁或深度检测拦
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-1-14-free-node-subscribe-links.htm" title="1月14日→19.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月14日→19.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-7-free-node-subscribe.htm" title="1月7日→19.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月7日→19.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-31-latest-quantumult-x-node.htm" title="1月31日→18.7M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月31日→18.7M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-29-node-share.htm" title="1月29日→22M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月29日→22M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-4-node-share-links.htm" title="2月4日→20.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">2月4日→20.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-15-free-node-subscribe.htm" title="1月15日→18.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月15日→18.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-26-quantumult-x-node.htm" title="1月26日→19.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月26日→19.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-1-21-quantumult-x-node.htm" title="1月21日→20M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月21日→20M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-2-7-quantumult-x-github.htm" title="2月7日→20.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">2月7日→20.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-2-1-node-share-links.htm" title="2月1日→18.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">2月1日→18.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-11-quantumult-x-node-windows.htm" title="1月11日→20.6M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月11日→20.6M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-13-quantumult-x-github.htm" title="2月13日→18.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">2月13日→18.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-1-20-quantumult-x-github.htm" title="1月20日→19.6M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月20日→19.6M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-5-free-subscribe-node.htm" title="1月5日→19.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月5日→19.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-28-free-subscribe-node.htm" title="1月28日→18.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月28日→18.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-6-quantumult-x-node-github.htm" title="2月6日→22.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">2月6日→22.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-27-quantumult-x-node-windows.htm" title="1月27日→22.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">1月27日→22.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-7-quantumult-x-github.htm" title="2月7日→20.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">2月7日→20.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
                     </ul>
     </div>
 </div>
@@ -459,10 +459,10 @@ DNS修改只能解决域名解析问题，若网站被IP封锁或深度检测拦
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2026-02/" title="2026-02 归档">2026-02</a></h4>
+                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2026-02/" title="2026-02 归档">2026-02</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
             </li>
                     </ul>
     </div>
