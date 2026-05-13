@@ -479,14 +479,14 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 如何实现节点延迟自动切换？</h5></div>
-    <div class="panel-body">
-        Nekoray 支持配置策略组（Policy Group），用户可设置 URL 测试或周期检测机制，根据延迟自动选择最优节点。此功能能提升稳定性，尤其适合多线路机场订阅用户。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Quantumult X 的主要功能是什么？</h5></div>
     <div class="panel-body">
         Quantumult X 是一款功能极其强大的 iOS 网络代理应用，支持多种协议和脚本扩展。它可以通过规则分流、广告屏蔽、请求重写等方式优化网络体验。Quantumult X 常被技术用户用于高级自动化与自定义代理策略。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>QuantumultX 如何使用分流策略实现广告屏蔽？</h5></div>
+    <div class="panel-body">
+        QuantumultX 可通过规则匹配广告域名或路径，将请求重定向或直接阻断。结合策略组，可实现自动屏蔽网页和应用广告，提高用户浏览体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>如何合理设置 Clash 的 proxy-group 实现自动切换？</h5></div>
@@ -494,19 +494,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         创建包含多个节点的策略组（如 `url-test` 或 `fallback`），设置合适的检测 URL 与检测频率，启用延迟优先或可用性优先策略。这样客户端会自动选择延迟最低或可用节点，提升稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的端口转发功能如何开启？</h5></div>
+    <div class="panel-heading"><h5>Nekoray 如何实现节点延迟自动切换？</h5></div>
     <div class="panel-body">
-        在服务器端配置文件中启用 port_forwarding 参数并指定目标端口与地址。确保防火墙开放转发端口，客户端使用对应端口连接即可实现流量中继。此功能常用于内网穿透或端口复用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 能否同步 iCloud 配置？</h5></div>
-    <div class="panel-body">
-        可以。Surfboard 支持 iCloud 同步功能，用户可在不同苹果设备上共享同一配置文件。这样即使更换手机或重装系统，也能自动恢复节点与分流设置。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 的加密方式如何选择？</h5></div>
-    <div class="panel-body">
-        VMess 支持自动加密和 AEAD 加密等多种方式。AEAD 加密更安全且抗重放攻击，适合高安全性需求的网络环境，而普通加密在性能上稍快，但安全性略低。<hr />    </div>
+        Nekoray 支持配置策略组（Policy Group），用户可设置 URL 测试或周期检测机制，根据延迟自动选择最优节点。此功能能提升稳定性，尤其适合多线路机场订阅用户。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 支持哪些内核？</h5></div>
@@ -514,14 +504,24 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         PassWall2 支持多种代理内核，如 Xray、V2Ray、Sing-box、Trojan-go、Hysteria2 等。用户可在插件管理中切换所需内核，以获得不同协议与性能的支持。部分内核需手动下载并启用。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess 的加密方式如何选择？</h5></div>
+    <div class="panel-body">
+        VMess 支持自动加密和 AEAD 加密等多种方式。AEAD 加密更安全且抗重放攻击，适合高安全性需求的网络环境，而普通加密在性能上稍快，但安全性略低。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 使用 WebSocket + TLS 有哪些优势？</h5></div>
     <div class="panel-body">
         WebSocket + TLS 可将 V2Ray 流量伪装成 HTTPS 请求，隐藏真实通信特征。结合域名伪装和策略组使用，可以有效绕过封锁，提高节点安全性和连接稳定性，保持长期稳定访问。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 如何使用分流策略实现广告屏蔽？</h5></div>
+    <div class="panel-heading"><h5>Surfboard 能否同步 iCloud 配置？</h5></div>
     <div class="panel-body">
-        QuantumultX 可通过规则匹配广告域名或路径，将请求重定向或直接阻断。结合策略组，可实现自动屏蔽网页和应用广告，提高用户浏览体验。<hr />    </div>
+        可以。Surfboard 支持 iCloud 同步功能，用户可在不同苹果设备上共享同一配置文件。这样即使更换手机或重装系统，也能自动恢复节点与分流设置。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 的端口转发功能如何开启？</h5></div>
+    <div class="panel-body">
+        在服务器端配置文件中启用 port_forwarding 参数并指定目标端口与地址。确保防火墙开放转发端口，客户端使用对应端口连接即可实现流量中继。此功能常用于内网穿透或端口复用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Mellow 是否支持 IPv6 流量代理？</h5></div>
@@ -555,16 +555,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-3-11-free-high-speed-nodes.htm" title="3月11日→18.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">3月11日→18.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-2-latest-quantumult-x-node.htm" title="4月2日→19.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">4月2日→19.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-16-quantumult-x-node-share.htm" title="4月16日→22.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">4月16日→22.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-20-quantumult-x-node-share.htm" title="3月20日→18.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">3月20日→18.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-4-free-node-subscribe-links.htm" title="5月4日→18.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">5月4日→18.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-3-quantumult-x-github.htm" title="5月3日→21.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">5月3日→21.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-13-node-share.htm" title="4月13日→18.6M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">4月13日→18.6M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-27-node-share.htm" title="4月27日→22.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">4月27日→22.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-30-node-share.htm" title="4月30日→22.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">4月30日→22.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-4-22-free-quantumult-x-node.htm" title="4月22日→18.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">4月22日→18.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-4-free-quantumult-x-node.htm" title="3月4日→21.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">3月4日→21.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-17-node-share-links.htm" title="3月17日→22.6M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">3月17日→22.6M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-9-node-share-links.htm" title="3月9日→20.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">3月9日→20.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-24-node-share-links.htm" title="4月24日→21.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">4月24日→21.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-26-free-quantumult-x-node.htm" title="3月26日→20.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">3月26日→20.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-18-quantumult-x-node-github.htm" title="4月18日→21.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">4月18日→21.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-11-latest-quantumult-x-node.htm" title="5月11日→19.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">5月11日→19.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-7-quantumult-x-node-share.htm" title="5月7日→21.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">5月7日→21.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-9-free-node-subscribe.htm" title="5月9日→21.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">5月9日→21.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></li>
                     </ul>
     </div>
 </div>
@@ -576,10 +576,10 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">22</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-03/" title="2026-03 归档">2026-03</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
             </li>
                     </ul>
     </div>
