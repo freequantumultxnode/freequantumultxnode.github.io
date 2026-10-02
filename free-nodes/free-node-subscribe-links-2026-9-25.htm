@@ -352,47 +352,13 @@ A：因为 UDP 没有确认机制，数据实时送达即可，丢包不会重�
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/2026-9-24-free-quantumult-x-node.htm">9月24日→20.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></p>
+        <p>下一个：<a href="/free-nodes/2026-9-26-node-share.htm">9月26日→18.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a></p>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的 gRPC 模式适合哪些场景？</h5></div>
+    <div class="panel-heading"><h5>Netch 的 TUN 模式与 SOCKS 模式有何差异？</h5></div>
     <div class="panel-body">
-        gRPC 支持多路复用和长连接，适合高并发访问和移动网络场景。相比 TCP 或 WebSocket，它可以减少握手次数，降低延迟，同时提高连接稳定性和吞吐量，特别适合游戏或即时通讯。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan-go 与原版 Trojan 有什么不同？</h5></div>
-    <div class="panel-body">
-        Trojan-go 在原版 Trojan 基础上扩展了多协议支持、WebSocket、gRPC、mux 多路复用等特性，同时优化性能并支持更丰富的客户端。相比原版，它更灵活，适合高级用户或多平台部署需求。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的流量分流规则支持哪些条件？</h5></div>
-    <div class="panel-body">
-        V2Ray 支持按域名、IP、端口、协议或用户标签进行分流。用户可灵活设置国内直连、国外代理或特定节点，实现精准控制和网络优化。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 显示证书错误，如何修复？</h5></div>
-    <div class="panel-body">
-        证书错误通常由域名与证书不匹配或证书链不完整引起。请检查服务器证书是否为有效域名签发并包含完整链，如果使用 Let's Encrypt，请确保证书未过期并已正确安装到反向代理或服务端。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 连接延迟过高该如何优化？</h5></div>
-    <div class="panel-body">
-        可尝试切换传输协议（如 WS、gRPC）、调整 MTU 或启用 MUX 多路复用功能。同时检查服务器地理位置、带宽和延迟，并选择最优节点以降低延迟。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的多出口功能如何使用？</h5></div>
-    <div class="panel-body">
-        WinXray 支持同时配置多个 outbound 节点，并通过路由规则或策略组选择不同出口。这样可以根据流量类型或目的地自动选择节点，实现灵活分流和负载均衡。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何在 Clash for Android 中导入订阅链接？</h5></div>
-    <div class="panel-body">
-        Clash for Android 支持通过订阅链接快速导入节点。用户只需在配置界面中点击“新建配置”，选择“URL 导入”并粘贴订阅地址即可，程序会自动下载并解析所有节点配置。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何合理设置 Clash 的 proxy-group 实现自动切换？</h5></div>
-    <div class="panel-body">
-        创建包含多个节点的策略组（如 `url-test` 或 `fallback`），设置合适的检测 URL 与检测频率，启用延迟优先或可用性优先策略。这样客户端会自动选择延迟最低或可用节点，提升稳定性。<hr />    </div>
+        TUN 模式通过虚拟网卡拦截所有流量，更接近系统级代理；SOCKS 模式则仅作用于指定应用。TUN 模式更适合全局代理需求，而 SOCKS 模式轻量快捷，适用于游戏或单软件加速。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Quantumult X 支持 VLESS 吗？</h5></div>
@@ -400,9 +366,44 @@ A：因为 UDP 没有确认机制，数据实时送达即可，丢包不会重�
         Quantumult X 目前官方未原生支持 VLESS，但通过手动修改配置或第三方脚本可实现兼容。若主要使用 VLESS 协议，可考虑使用 Sing-box 或 Shadowrocket 作为替代。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 的 TUN 模式与 SOCKS 模式有何差异？</h5></div>
+    <div class="panel-heading"><h5>如何在 Clash for Android 中导入订阅链接？</h5></div>
     <div class="panel-body">
-        TUN 模式通过虚拟网卡拦截所有流量，更接近系统级代理；SOCKS 模式则仅作用于指定应用。TUN 模式更适合全局代理需求，而 SOCKS 模式轻量快捷，适用于游戏或单软件加速。    </div>
+        Clash for Android 支持通过订阅链接快速导入节点。用户只需在配置界面中点击“新建配置”，选择“URL 导入”并粘贴订阅地址即可，程序会自动下载并解析所有节点配置。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 的多出口功能如何使用？</h5></div>
+    <div class="panel-body">
+        WinXray 支持同时配置多个 outbound 节点，并通过路由规则或策略组选择不同出口。这样可以根据流量类型或目的地自动选择节点，实现灵活分流和负载均衡。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 显示证书错误，如何修复？</h5></div>
+    <div class="panel-body">
+        证书错误通常由域名与证书不匹配或证书链不完整引起。请检查服务器证书是否为有效域名签发并包含完整链，如果使用 Let's Encrypt，请确保证书未过期并已正确安装到反向代理或服务端。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的流量分流规则支持哪些条件？</h5></div>
+    <div class="panel-body">
+        V2Ray 支持按域名、IP、端口、协议或用户标签进行分流。用户可灵活设置国内直连、国外代理或特定节点，实现精准控制和网络优化。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的 gRPC 模式适合哪些场景？</h5></div>
+    <div class="panel-body">
+        gRPC 支持多路复用和长连接，适合高并发访问和移动网络场景。相比 TCP 或 WebSocket，它可以减少握手次数，降低延迟，同时提高连接稳定性和吞吐量，特别适合游戏或即时通讯。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何合理设置 Clash 的 proxy-group 实现自动切换？</h5></div>
+    <div class="panel-body">
+        创建包含多个节点的策略组（如 `url-test` 或 `fallback`），设置合适的检测 URL 与检测频率，启用延迟优先或可用性优先策略。这样客户端会自动选择延迟最低或可用节点，提升稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan-go 与原版 Trojan 有什么不同？</h5></div>
+    <div class="panel-body">
+        Trojan-go 在原版 Trojan 基础上扩展了多协议支持、WebSocket、gRPC、mux 多路复用等特性，同时优化性能并支持更丰富的客户端。相比原版，它更灵活，适合高级用户或多平台部署需求。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess 连接延迟过高该如何优化？</h5></div>
+    <div class="panel-body">
+        可尝试切换传输协议（如 WS、gRPC）、调整 MTU 或启用 MUX 多路复用功能。同时检查服务器地理位置、带宽和延迟，并选择最优节点以降低延迟。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -450,16 +451,16 @@ A：因为 UDP 没有确认机制，数据实时送达即可，丢包不会重�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-9-6-node-share.htm" title="9月6日→20.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月6日→20.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-12-quantumult-x-node.htm" title="8月12日→20.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">8月12日→20.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-2-free-subscribe-node.htm" title="9月2日→19.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月2日→19.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-8-quantumult-x-github.htm" title="8月8日→18.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">8月8日→18.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-9-1.htm" title="9月1日→20.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月1日→20.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-25.htm" title="9月25日→18.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月25日→18.5M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-9-12-quantumult-x-github.htm" title="9月12日→21.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月12日→21.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-share-2026-8-29.htm" title="8月29日→20.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">8月29日→20.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-20-quantumult-x-node.htm" title="9月20日→22.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月20日→22.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-22-quantumult-x-node.htm" title="9月22日→20.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月22日→20.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-github-2026-8-7.htm" title="8月7日→20.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">8月7日→20.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-windows-2026-9-9.htm" title="9月9日→19M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月9日→19M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/latest-quantumult-x-node-2026-9-27.htm" title="9月27日→22.7M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月27日→22.7M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-19.htm" title="9月19日→20M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月19日→20M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-11.htm" title="9月11日→18.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月11日→18.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-free-node-subscribe.htm" title="9月4日→19M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月4日→19M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-share-2026-9-3.htm" title="9月3日→20.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月3日→20.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-8-free-subscribe-node.htm" title="9月8日→21.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月8日→21.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-26-node-share.htm" title="9月26日→18.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月26日→18.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -471,10 +472,10 @@ A：因为 UDP 没有确认机制，数据实时送达即可，丢包不会重�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">2</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                     </ul>
     </div>
