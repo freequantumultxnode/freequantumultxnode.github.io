@@ -446,24 +446,9 @@ Skytrax在乘客心中最具影响力，但OAG、ACI等机构的专业评分也�
         TUN 模式拦截系统 IP 层流量，实现全局代理；SOCKS5 代理通常只影响支持代理的应用。TUN 更适合全局加速和游戏、视频等应用，保证所有流量通过节点，提高网络稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS 的 XTLS 模式能提升传输效率吗？</h5></div>
+    <div class="panel-heading"><h5>PassWall2 的延迟测速功能如何提高网络体验？</h5></div>
     <div class="panel-body">
-        XTLS 模式通过减少冗余加密和握手次数，降低延迟，提高吞吐量。在高并发和短连接场景下，效率明显优于普通 TLS，同时保持数据安全性和隐蔽性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 如何结合延迟选择最优节点？</h5></div>
-    <div class="panel-body">
-        PassWall2 定期测速节点延迟，并结合策略组自动选择延迟最低的节点。无需手动操作即可保证网页、视频和游戏流量快速稳定访问，提高整体网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 协议是如何伪装流量的？</h5></div>
-    <div class="panel-body">
-        Trojan 利用 HTTPS 协议进行传输伪装，通过 TLS 加密实现高度隐蔽性。它让代理流量看起来与普通网站访问完全相同，从而难以被防火墙检测，是目前安全性较高的代理方案之一。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 如何定时自动更新节点？</h5></div>
-    <div class="panel-body">
-        可在计划任务中添加命令 `passwall update` 并设定时间间隔，例如每日凌晨自动更新。这样可确保节点信息实时同步，避免旧节点失效影响连接体验。<hr />    </div>
+        PassWall2 可以定期测速节点延迟，并结合策略组自动选择最优节点。这样在访问网站或视频时，可以始终使用延迟最低的线路，提高网络稳定性和速度。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray 可以自定义规则吗？</h5></div>
@@ -471,14 +456,9 @@ Skytrax在乘客心中最具影响力，但OAG、ACI等机构的专业评分也�
         可以。WinXray 支持编辑路由规则文件，用户可设置域名白名单或黑名单，实现分流策略。例如国内流量直连、国外流量走代理，从而提高网络访问效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 的延迟测速功能如何提高网络体验？</h5></div>
+    <div class="panel-heading"><h5>Trojan 协议是如何伪装流量的？</h5></div>
     <div class="panel-body">
-        PassWall2 可以定期测速节点延迟，并结合策略组自动选择最优节点。这样在访问网站或视频时，可以始终使用延迟最低的线路，提高网络稳定性和速度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 支持按端口和协议分流吗？</h5></div>
-    <div class="panel-body">
-        支持。QuantumultX 可以按 TCP、UDP、端口和应用协议分流流量，结合策略组使用，确保游戏、视频和广告屏蔽走最优节点，提高访问速度和网络稳定性。<hr />    </div>
+        Trojan 利用 HTTPS 协议进行传输伪装，通过 TLS 加密实现高度隐蔽性。它让代理流量看起来与普通网站访问完全相同，从而难以被防火墙检测，是目前安全性较高的代理方案之一。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Matsuri 节点排序如何提高视频播放流畅性？</h5></div>
@@ -486,9 +466,29 @@ Skytrax在乘客心中最具影响力，但OAG、ACI等机构的专业评分也�
         Matsuri 会测速节点延迟，并结合策略组自动选择延迟低、稳定性高的节点处理视频流量。减少缓冲和卡顿，保证在线视频播放顺畅，提高整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS 的 XTLS 模式能提升传输效率吗？</h5></div>
+    <div class="panel-body">
+        XTLS 模式通过减少冗余加密和握手次数，降低延迟，提高吞吐量。在高并发和短连接场景下，效率明显优于普通 TLS，同时保持数据安全性和隐蔽性。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 的协议和混淆组合如何选择？</h5></div>
     <div class="panel-body">
-        根据网络封锁情况选择合适协议和混淆组合，例如 tls1.2_ticket_auth 模拟 HTTPS 流量。选择最佳组合可提高抗封锁能力和稳定性，保证节点长期可用。    </div>
+        根据网络封锁情况选择合适协议和混淆组合，例如 tls1.2_ticket_auth 模拟 HTTPS 流量。选择最佳组合可提高抗封锁能力和稳定性，保证节点长期可用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>QuantumultX 支持按端口和协议分流吗？</h5></div>
+    <div class="panel-body">
+        支持。QuantumultX 可以按 TCP、UDP、端口和应用协议分流流量，结合策略组使用，确保游戏、视频和广告屏蔽走最优节点，提高访问速度和网络稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 如何结合延迟选择最优节点？</h5></div>
+    <div class="panel-body">
+        PassWall2 定期测速节点延迟，并结合策略组自动选择延迟最低的节点。无需手动操作即可保证网页、视频和游戏流量快速稳定访问，提高整体网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 如何定时自动更新节点？</h5></div>
+    <div class="panel-body">
+        可在计划任务中添加命令 `passwall update` 并设定时间间隔，例如每日凌晨自动更新。这样可确保节点信息实时同步，避免旧节点失效影响连接体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -536,16 +536,16 @@ Skytrax在乘客心中最具影响力，但OAG、ACI等机构的专业评分也�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-10-6-free-subscribe-node.htm" title="10月6日→19.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月6日→19.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-10-1.htm" title="10月1日→20.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月1日→20.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/quantumult-x-node-share-2026-9-21.htm" title="9月21日→20.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月21日→20.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-10-13.htm" title="10月13日→18.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月13日→18.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-github-2026-9-7.htm" title="9月7日→20.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月7日→20.2M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-share-2026-10-21.htm" title="10月21日→22.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月21日→22.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/latest-quantumult-x-node-2026-10-17.htm" title="10月17日→22.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月17日→22.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-16-free-quantumult-x-node.htm" title="10月16日→21.6M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月16日→21.6M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-20-free-subscribe-node.htm" title="10月20日→21M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月20日→21M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-15.htm" title="9月15日→19.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月15日→19.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-windows-2026-11-1.htm" title="11月1日→18.7M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月1日→18.7M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-10-18-quantumult-x-node.htm" title="10月18日→22M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月18日→22M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-8-today-quantumult-x-node.htm" title="10月8日→20M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月8日→20M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-github-2026-10-29.htm" title="10月29日→21.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月29日→21.9M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-29.htm" title="9月29日→22.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月29日→22.3M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-2-free-node-subscribe.htm" title="10月2日→21.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">10月2日→21.4M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/latest-quantumult-x-node-2026-11-7.htm" title="11月7日→22.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">11月7日→22.8M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-12-quantumult-x-github.htm" title="9月12日→21.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址">9月12日→21.1M/S|2025年最新免费节点Free QuantumultX Node(圈X)订阅链接地址</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -556,6 +556,9 @@ Skytrax在乘客心中最具影响力，但OAG、ACI等机构的专业评分也�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
+            </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
